@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday My Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="hearts">
+    <div class="heart" style="left:10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left:30%; animation-delay: 2s;"></div>
+    <div class="heart" style="left:50%; animation-delay: 4s;"></div>
+    <div class="heart" style="left:70%; animation-delay: 1s;"></div>
+    <div class="heart" style="left:90%; animation-delay: 3s;"></div>
+  </div>
+
+  <h1 class="main-heading">Happy Birthday My Love 🎂💖</h1>
+  <p class="typing">You are my everything... my smile, my future, my forever. 💫💖</p>
+
+  <div class="quote-carousel" id="quoteBox">
+    <p>"In you, I’ve found my heart’s rhythm."</p>
+  </div>
+
+  <div class="audio-section">
+    <audio controls autoplay loop>
+      <source src="song.mp3" type="audio/mp3">
+    </audio><br/>
+    <button onclick="document.getElementById('myVoice').play()">🎶 Play Our Song</button>
+    <audio id="myVoice" src="yourvoice.mp3"></audio>
+  </div>
+
+  <div class="lyrics-section">
+    <h2>🎵 This lyrics reminds you forever💕</h2>
+    <div id="lyrics">
+      <p class="lyrics-line">படபடக்கும் கண்ணால… 😍</p>
+      <p class="lyrics-line">என மிரட்டிக் கொஞ்சம் மாத்திட்ட… 😚</p>
+      <p class="lyrics-line">மனசுடைஞ்சு போகாத… 💓</p>
+      <p class="lyrics-line">உன் விரல் புடிச்சு நானும் கரை ஏறுவேன்… 🤝</p>
+      <p class="lyrics-line">என் சொகமே என் மொகமே… 🌸</p>
+      <p class="lyrics-line">எங்கேயோ தொலைஞ்சவளே… 🌌</p>
+      <p class="lyrics-line">என் வரமே என் நிறமே… 🌈</p>
+      <p class="lyrics-line">ஏழாக வளைஞ்சவளே… 💫</p>
+    </div>
+  </div>
+
+  <div class="gallery-wrapper">
+    <div class="gallery-title">💕 Sweetest Memories Together 💕</div>
+    <div class="gallery" id="gallery">
+      <div class="gallery-item" data-caption="You're My Everything 💕"><img src="image1.jpg" alt="Photo 1"></div>
+      <div class="gallery-item" data-caption="My World 🌍"><img src="image2.jpg" alt="Photo 2"></div>
+      <div class="gallery-item" data-caption="My Happiness 😊"><img src="image3.jpg" alt="Photo 3"></div>
+      <div class="gallery-item" data-caption="My Forever 💞"><img src="image4.jpg" alt="Photo 4"></div>
+      <div class="gallery-item" data-caption="Our Magic Moments ✨"><img src="image5.jpg" alt="Photo 5"></div>
+      <div class="gallery-item" data-caption="Cutest Laugh 😄"><img src="image6.jpg" alt="Photo 6"></div>
+      <div class="gallery-item" data-caption="my bestest ⏳"><img src="image7.jpg" alt="Photo 7"></div>
+      <div class="gallery-item" data-caption="My Heartbeat ❤️"><img src="image8.jpg" alt="Photo 8"></div>
+      <div class="gallery-item" data-caption="Soulmate Forever 💑"><img src="image9.jpg" alt="Photo 9"></div>
+    </div>
+  </div>
+
+  <div class="video-section">
+    <h2>🎥 Special Surprise Video 💖</h2>
+    <video controls>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="special-box" onclick="showPopup()">
+    💌 Tap me to reveal something beautiful...
+  </div>
+
+  <div class="love-letter">
+    <h2>My Heartfelt Note to You 💌</h2>
+    <p><p>
+  You didn't just enter my life — you healed parts of me I didn’t know were broken. 💫<br>
+  With every laugh, every look, and every word, you make my world feel lighter. 🌷<br>
+  I still wonder how I got so lucky to call you mine... every moment with you is a blessing. 🙏<br>
+  Happy Birthday, my love. You are not just my person — you are my forever ❤️
+</p>
+ ❤️</p>
+  </div>
+
+  <script>
+    const lines = document.querySelectorAll('.lyrics-line');
+    let lineIndex = 0;
+    function showNextLine() {
+      if (lineIndex < lines.length) {
+        lines[lineIndex].style.display = 'block';
+        lineIndex++;
+        setTimeout(showNextLine, 6000);
+      }
+    }
+    showNextLine();
+
+    function showPopup() {
+  const box = document.querySelector('.special-box');
+  box.innerHTML = `
+    "Nee en vaalkaila vandha naal 🌟<br>
+     adhu dhan en life la marakka mudiyatha moment. 💘<br>
+    Nee vandha piragu thaan enaku en life fullfil feel aaguthu... 🎈<br>
+    Eppovum en kooda iru… eppovum sirikitte iru… once again happy birthday my dearest soul 😊<br>
+     💖"
+  `;
+  box.style.fontSize = '24px';
+}
+
+
+    const photos = document.querySelectorAll(".gallery img");
+    photos.forEach((photo, i) => {
+      photo.style.animationDelay = `${i * 0.4}s`;
+    });
+
+    const quotes = [
+  
+  "\"A lifetime with you still wouldn’t be enough... because my soul craves you endlessly.\" ♾️💘",
+  "\"Your smile doesn’t just light up my day — it brings peace to my storms and warmth to my silence.\" 🌅",
+  "\"Before I ever knew your face, my heart recognized your soul and whispered... 'this is home.'\" 🕊️"
+];
+    let q = 0;
+    setInterval(() => {
+      document.getElementById('quoteBox').innerHTML = `<p>${quotes[q]}</p>`;
+      q = (q + 1) % quotes.length;
+    }, 5000);
+
+    document.addEventListener('mousemove', function(e) {
+      let heart = document.createElement('div');
+      heart.className = 'cursor-heart';
+      heart.style.left = e.pageX + 'px';
+      heart.style.top = e.pageY + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1000);
+    });
+  </script>
+</body>
+</html>
